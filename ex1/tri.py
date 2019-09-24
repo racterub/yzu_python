@@ -7,8 +7,11 @@
 
 from math import sqrt
 
-a, b, c = [int(i) for i in input("Input your triangle (a b c):").split(" ")]
+a = int(input("Input a:")) #測資: 5
+b = int(input("Input b:")) #測資: 12
+c = int(input("Input c:")) #測資: 13
 
-s = a + b + c
+s = (a + b + c)/2
 area = sqrt(s*(s-a)*(s-b)*(s-c))
+print(s*(s-a)*(s-b)*(s-c))
 print(area)

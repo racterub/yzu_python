@@ -5,5 +5,17 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
-data = input("Input data: ")
-print("   ".join(list(data)))
+data = int(input("Input data: ")) #測資: 42139
+
+a = data % 10
+data = data // 10
+b = data % 10
+data = data // 10
+c = data % 10
+data = data // 10
+d = data % 10
+data = data // 10
+e = data % 10
+
+print(e, d, c, b, a, sep="   ")
+#輸出: 4   2   1   3   9
