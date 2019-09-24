@@ -13,5 +13,5 @@ c = int(input("Input c:")) #測資: 13
 
 s = (a + b + c)/2
 area = sqrt(s*(s-a)*(s-b)*(s-c))
-print(s*(s-a)*(s-b)*(s-c))
 print(area)
+#輸出: 30.0
