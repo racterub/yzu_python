@@ -13,7 +13,7 @@ b = data % 10
 data = data // 10
 c = data % 10
 data = data // 10
-d = data // 10
+d = data % 10
 e = data // 10
 
 if (e == a and b == d):
