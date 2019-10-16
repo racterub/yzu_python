@@ -13,3 +13,4 @@ while k <= 50:
     k = k + 1
 
 print(total)
+#輸出: 42925

@@ -5,7 +5,7 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
-data = int(input("Input your range:"))
+data = int(input("Input your range:")) #測資 500
 
 answer = []
 for i in range(1, data+1):
@@ -17,3 +17,4 @@ for i in range(1, data+1):
         answer.append(str(i))
 
 print("Answer: ", ', '.join(answer))
+#輸出: Answer:  6, 28, 496

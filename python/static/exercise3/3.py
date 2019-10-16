@@ -5,7 +5,7 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
-data = int(input("Input your data:"))
+data = int(input("Input your data:")) #測資: 2
 
 answer = 1
 for i in range(1, 101):
@@ -15,5 +15,6 @@ for i in range(1, 101):
         fac *= tmp
         tmp += 1
     eq = data**i/fac
-    answer += eq
+    answer = answer + eq
 print(answer)
+#輸出: 7.389056098930649

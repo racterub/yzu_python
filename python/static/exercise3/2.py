@@ -5,7 +5,7 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
-data = int(input("Input your number:"))
+data = int(input("Input your number:")) #測資: 6
 
 if data == 0:
     print("exit")
@@ -20,3 +20,5 @@ else:
         answer = answer * i
         i += 1
     print(answer)
+
+#輸出: 720

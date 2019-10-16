@@ -12,6 +12,7 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
-data = int(input("I0nput fibonacci sequence:"))
+data = int(input("Input fibonacci sequence:")) #測資: 8
 
 print(fib(data))
+#輸出: 21
