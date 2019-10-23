@@ -10,10 +10,8 @@ data = int(input("Input your data:")) #測資: 2
 answer = 1
 for i in range(1, 101):
     fac = 1
-    tmp = 1
-    while tmp <= i:
-        fac *= tmp
-        tmp += 1
+    for j in range(1, i+1):
+        fac *= j
     eq = data**i/fac
     answer = answer + eq
 print(answer)
