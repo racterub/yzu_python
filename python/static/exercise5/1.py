@@ -6,8 +6,13 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
-s1 = input("S1: ")
-s2 = input("S2: ")
+'''
+先找出長度最小的字串，以他的長度為基準開一個 for loop ，然後前面先 s1 s2 互相填入 answer ，直到長度最小的字串結束，再將長度較長的字串的剩餘資料寫入 answer
+'''
+
+
+s1 = input("S1: ") #測資: hi
+s2 = input("S2: ") #測資: hello
 answer = ''
 
 #Find the shortest string
@@ -25,3 +30,4 @@ else:
     answer += s2[length:]
 
 print(answer)
+#輸出: hhiello

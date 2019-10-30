@@ -6,12 +6,20 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
-string = input(': ')
+'''
+做法同第六題
+'''
+
+
+
+string = input(': ') #測資: Hello-123-World!
+
+alphabets = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 answer = ''
 tmp = ''
 for i in range(len(string)):
-    if string[i].isalpha():
+    if string[i] in alphabets:
         tmp += string[i]
     else:
         answer += tmp[::-1]
@@ -20,3 +28,4 @@ for i in range(len(string)):
 answer += tmp[::-1]
 
 print(answer)
+#輸出: olleH-123-dlroW!
