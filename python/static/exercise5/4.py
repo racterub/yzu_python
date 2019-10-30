@@ -6,6 +6,15 @@
 # @Link    : https://racterub.io
 # @License : MIT
 
+'''
+就老師上課教的那樣
+i 是第一個數字
+j 是第二個數字
+k 是第三個數字
+想成是高中機率組合，在找機率就是ㄌ，三個字不重複
+'''
+
+
 string = input("Input your string: ")
 string_len = len(string)
 
@@ -20,4 +29,5 @@ for i in range(string_len):
                 answer.append(a+b+c)
 
 
-print(', '.join(answer))
+for i in answer:
+    print(i, end=" ")
