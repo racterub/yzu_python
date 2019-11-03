@@ -15,15 +15,12 @@ email 格式: username + @ + 網站名稱
 email = input("Input your email address: ")
 
 #Check domain
-if email[-11:] != ".yzu.edu.tw":
+if email[-11:] == ".yzu.edu.tw":
+    domain = email.split('@')[1].split('.')
+    if len(domain) == 4:
+        print("Valid Email")
+        exit()
+    else:
+        print("Invalid Email")
+else:
     print("Invalid Email")
-    exit()
-
-#Check domain if it has four level domain
-domain = email.split('@')[1].split('.')
-if len(domain) != 4:
-    print("Invalid Email")
-    exit()
-
-
-print("Valid Email")

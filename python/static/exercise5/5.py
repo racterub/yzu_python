@@ -12,20 +12,20 @@
 
 
 
-string = input(': ') #測資: Hello-123-World!
+string = list(input(': ')) #測資: Hello-123-World!
 
-alphabets = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
 
 answer = ''
-tmp = ''
+alpha = []
 for i in range(len(string)):
-    if string[i] in alphabets:
-        tmp += string[i]
-    else:
-        answer += tmp[::-1]
-        tmp = ''
-        answer += string[i]
-answer += tmp[::-1]
+    if string[i].isalpha():
+        alpha.append(string[i])
 
-print(answer)
+for i in range(len(string)):
+    if string[i].isalpha():
+        string[i] = alpha.pop()
+
+
+print(''.join(string))
 #輸出: olleH-123-dlroW!
