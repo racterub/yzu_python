@@ -14,9 +14,10 @@ def validate_triangle():
     c = int(input("c: "))
 
     data_list = [a,b,c]
+    data_list.sort()
 
 
-    if ((max(data_list) ** 2 ) == (data_list[0] ** 2 + data_list[1] ** 2)):
+    if (data_list[2] ** 2 ) == (data_list[0] ** 2 + data_list[1] ** 2):
         return True
     else:
         return False
