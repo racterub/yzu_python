@@ -7,7 +7,10 @@
 # @License : MIT
 
 def sum_digits():
-    data = list(input(": "))
-    return sum(data)
+    data = input(": ").strip()
+    result = 0
+    for i in str(data):
+        result += int(i)
+    return result
 
 print(sum_digits())
