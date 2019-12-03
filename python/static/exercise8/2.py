@@ -7,21 +7,38 @@
 
 
 f = open("10co2008CO_err.txt")
-data = f.readlines()[1:]
+import pprint
+data = f.readlines()
+head = data[0]
+data = data[1:]
+data = [i.strip().split('\t') for i in data]
 
 
-maxinium = 0
-for i in data:
-    tmp_max = i.strip().split('\t')
+def init_list_of_objects(size):
+    list_of_objects = list()
+    for i in range(0,size):
+        list_of_objects.append( list() ) #different object reference each time
+    return list_of_objects
+
+
+result = init_list_of_objects(12)
+
+
+def monthSpitter(data):
+    return data.split('/')[1]
+
+for i in range(len(data)):
+    month = int(monthSpitter(data[i][0]))
     try:
-        tmp_max = tmp_max[2]
+        tmp = data[i][2]
         try:
-            int_tmp_max = float(tmp_max)
-            if int_tmp_max > maxinium:
-                maxinium = int_tmp_max
+            tmp = float(tmp)
+            result[month-1].append(tmp)
         except ValueError:
             pass
     except IndexError:
         pass
 
-print(maxinium)
+print("{:6s}   {:6s}   {:6s}".format("Month", "max", "min"))
+for i in range(len(result)):
+    print("{:<6d}   {:>.2f}   {:.2f}".format(i, max(result[i]), min(result[i]))
