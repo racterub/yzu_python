@@ -7,7 +7,8 @@
 
 import csv
 
-rows = csv.DictReader(open("Dengue_Daily_EN.csv", newline=""))
+f = open("./Dengue_Daily_EN.csv")
+rows = csv.DictReader(f)
 
 #1
 scope = ["Taipei City", "New Taipei City"]
@@ -19,13 +20,23 @@ for row in rows:
 def dataSplitter(data):
     return data.split("/")
 
-casesDate = [[0]*12]*22 #Create lists to store result
+def createList(n):
+    data = []
+    for i in range(n):
+        tmp = []
+        for j in range(12):
+            tmp.append(0)
+        data.append(tmp)
+    return data
 
-count = 0
+casesDate = createList(22) #Create lists to store result
+
+f = open("./Dengue_Daily_EN.csv")
+rows = csv.DictReader(f)
 for row in rows:
     year, month, day = dataSplitter(row["Date_Onset"])
     casesDate[int(year)-1998][int(month)-1] += 1
 
 for i in range(len(casesDate)):
     for k in range(len(casesDate[0])):
-        print("{}/{} cases: {}".format(i + 1998, k, casesDate[i][k]))
+        print("{}/{} cases: {}".format(i + 1998, k+1, casesDate[i][k]))
