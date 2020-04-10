@@ -36,11 +36,7 @@ for i in data:
 
 print("Month    max    min    average")
 for i in range(len(result)):
-    print("{:<9d}{:<7.1f}{:<7.1f}{:<.1f}".format(i+1,
-                                                max(result[i]), #該月份最大值
-                                                min(result[i]), #該月份最小值
-                                                (sum(result[i])/len(result[i])) #該月份平均值
-                                                ))
+    print("{:<9d}{:<7.1f}{:<7.1f}{:<.1f}".format(i+1, max(result[i]), min(result[i]), (sum(result[i])/len(result[i]))))
 
 f.close()
 f = open("out.csv", "w")
@@ -48,5 +44,3 @@ writer = csv.writer(f)
 writer.writerow(["Month", "max", "min", "average"])
 for i in range(len(result)):
     writer.writerow([i+1, max(result[i]), min(result[i]), round(sum(result[i])/len(result[i]), 2)])
-
-
